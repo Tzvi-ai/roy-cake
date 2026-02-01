@@ -15,6 +15,8 @@ function App() {
     return saved ? JSON.parse(saved) : [];
   })
 
+
+
   // שמירת העגלה בכל פעם שהיא משתנה
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(products));
