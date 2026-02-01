@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Home from './pages/Home'
 import Gallery from './pages/Gallery'
@@ -45,7 +45,7 @@ function App() {
   }
   return (
     <>
-      <BrowserRouter basename="/roy-cake">
+      <HashRouter>
         <myContext.Provider value={{addProducts,deleteProduct, addOne,products}}>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -54,7 +54,7 @@ function App() {
             <Route path="/connect" element={<Conect/>} />
           </Routes>
         </myContext.Provider>
-      </BrowserRouter>
+      </HashRouter>
     </>
   )
 }
