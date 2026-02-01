@@ -45,7 +45,7 @@ function App() {
   }
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/roy-cake">
         <myContext.Provider value={{addProducts,deleteProduct, addOne,products}}>
           <Routes>
             <Route path="/" element={<Home />} />
